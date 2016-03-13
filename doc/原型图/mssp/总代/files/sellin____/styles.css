@@ -1,0 +1,298 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:1200px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u1 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1200px;
+  height:60px;
+}
+#u1_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1200px;
+  height:60px;
+}
+#u2 {
+  position:absolute;
+  left:2px;
+  top:22px;
+  width:1196px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u3 {
+  position:absolute;
+  left:100px;
+  top:10px;
+  width:180px;
+  height:40px;
+}
+#u3_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:180px;
+  height:40px;
+}
+#u4 {
+  position:absolute;
+  left:2px;
+  top:12px;
+  width:176px;
+  word-wrap:break-word;
+}
+#u5 {
+  position:absolute;
+  left:974px;
+  top:22px;
+  width:69px;
+  height:16px;
+}
+#u5_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:69px;
+  height:16px;
+}
+#u6 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:69px;
+  white-space:nowrap;
+}
+#u7 {
+  position:absolute;
+  left:1063px;
+  top:22px;
+  width:27px;
+  height:16px;
+  text-decoration:underline;
+}
+#u7_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:27px;
+  height:16px;
+}
+#u8 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:27px;
+  white-space:nowrap;
+}
+#u9 {
+  position:absolute;
+  left:520px;
+  top:12px;
+  width:65px;
+  height:37px;
+}
+#u9_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:65px;
+  height:37px;
+}
+#u10 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:65px;
+  white-space:nowrap;
+}
+#u11 {
+  position:absolute;
+  left:114px;
+  top:80px;
+  width:176px;
+  height:28px;
+}
+#u11_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:176px;
+  height:28px;
+}
+#u12 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:176px;
+  white-space:nowrap;
+}
+#u13 {
+  position:absolute;
+  left:114px;
+  top:140px;
+  width:66px;
+  height:16px;
+}
+#u13_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:66px;
+  height:16px;
+}
+#u14 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:66px;
+  white-space:nowrap;
+}
+#u15 {
+  position:absolute;
+  left:114px;
+  top:204px;
+  width:66px;
+  height:16px;
+}
+#u15_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:66px;
+  height:16px;
+}
+#u16 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:66px;
+  white-space:nowrap;
+}
+#u17 {
+  position:absolute;
+  left:240px;
+  top:197px;
+  width:100px;
+  height:26px;
+}
+#u17_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100px;
+  height:26px;
+}
+#u18 {
+  position:absolute;
+  left:2px;
+  top:5px;
+  width:96px;
+  word-wrap:break-word;
+}
+#u19 {
+  position:absolute;
+  left:240px;
+  top:340px;
+  width:100px;
+  height:25px;
+}
+#u19_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100px;
+  height:25px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+  text-align:center;
+}
+#u19_input {
+  font-family:'应用字体';
+}
+#u21 {
+  position:absolute;
+  left:0px;
+  top:870px;
+  width:1200px;
+  height:60px;
+}
+#u21_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:1200px;
+  height:60px;
+}
+#u22 {
+  position:absolute;
+  left:2px;
+  top:22px;
+  width:1196px;
+  visibility:hidden;
+  word-wrap:break-word;
+}
+#u23 {
+  position:absolute;
+  left:350px;
+  top:892px;
+  width:288px;
+  height:16px;
+}
+#u23_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:288px;
+  height:16px;
+}
+#u24 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:288px;
+  white-space:nowrap;
+}
+#u25 {
+  position:absolute;
+  left:240px;
+  top:137px;
+  width:200px;
+  height:22px;
+}
+#u25_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:200px;
+  height:22px;
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  text-decoration:none;
+  color:#000000;
+}
+#u25_input {
+  font-family:'应用字体';
+}
+#u25_input:disabled {
+  color:grayText;
+}

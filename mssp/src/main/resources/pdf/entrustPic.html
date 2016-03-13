@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+  <title>一次性发货委托申请</title>
+    <style>
+		.input_style{
+			width: 100px;
+		}
+		.project_title{
+		font-weight: bold;
+		}
+		.star{
+			color: red;
+		}
+		.table td{
+		border:1px solid #ddd;
+		}
+		.table th{
+		border:1px solid #ddd
+		}
+		.table-small tbody tr td{ padding:3px;}
+		.table-small tbody tr td input[type=text]{ width:35px;}
+		body {
+			font-family: SimSun;
+		}
+		.input-mini{
+			width: 30px;
+		}
+		.text-left {
+   			 text-align: left;
+		}
+		.bordernone { background-color: transparent; border:none; border-bottom: 1px solid #222;}
+    .bordernone:focus{ outline: none;}
+	</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="content"  align="center">
+      	<form id="myFrom" class="form-horizontal"  action="${ROOT}/b2b/project/next"  enctype="multipart/form-data" method="post" >
+	      	<table class="maintable table table-hover"  style="width: 65%;" border="1">
+		      	<tr name = "tr1" >
+		      		<td colspan="6">
+		      			<h3>（一次性地址）发货委托函</h3>
+		      		</td>
+		      	</tr>
+		      	<tr name = "tr1" >
+		      		<td colspan="6">
+		      			<p class="text-left"><span class="project_title">致：飛生（上海）電子科技有限公司</span></p>
+		      			<p class="text-left">
+		      				我公司委托贵司将我司此批所采购货物发送到以下指定地址：
+						</p>
+						<p class="text-left">
+							发货委托函有效期：<ins> ${validTime} </ins>(具体日期 周期为7-15天) 
+						</p>
+						<p class="text-left">
+							收货公司：<ins> ${receiveCompany} </ins> (与客户签收章样本一致)
+						</p>
+						<p class="text-left">
+							收货地址：<ins> ${receiveAddress} </ins> (指定地址)
+						</p>
+						<p class="text-left">
+							收货人：<ins> ${receivePerson} </ins>  (必须与身份证复印件一致) 
+						</p>
+						<p class="text-left">
+							联系电话：<ins> ${phone} </ins> (必须是收货人联系方式)
+						</p>
+						<p class="text-left">
+							身份证号码：<ins> ${idcardNum} </ins>(必须与身份证复印件一致)
+						</p>
+						
+					<br />
+					<p class="text-left">身份证复印件：</p>
+					<br /><img src="${idUrl}" width="150"/>
+					
+					<p class="text-left">客户签收盖章样本:</p>
+					<br /><img src="${customerSign}" width="150"/>
+						</td>
+		      	</tr>
+		      	<tr>
+		      	<td  colspan="6">
+					<p class="text-left">以上委托人收货视同我司收货，因此产生的一切纠纷与风险由我司承担，与贵司无关！</p>
+					</td>
+		      	</tr>
+		      
+		      	<tr>
+		      		<td>
+		      			公司盖章：
+		      		</td>
+		      	</tr>
+	      	</table>
+        </form>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+  <head>
+    <meta charset="utf-8"/>
+    <title>样机申请</title>
+    <style type="text/css">
+			.project_title{
+			font-weight: bold;
+			}
+			.star{
+				color: red;
+			}
+			.table td{
+			border:1px none #ddd;
+			}
+			.table table td{
+			border:1px solid #ddd;
+			}
+			.table th{
+			border:1px solid #ddd
+			}
+			.table-small tbody tr td{ padding:3px;}
+			.text-left {
+				text-align: left;
+			}
+			body {
+				font-family: SimSun;
+				font-size: 13px;
+				margin: 0px;
+				padding: 0px;
+			}
+	</style>
+  </head>
+  <body>
+		<div class="wrap">
+		    <div class="content"  align="center">
+		      	<form id="myFrom" class="form-horizontal" >
+			      	<input type="hidden" name="projectId"  value="${project.id }"/>
+			      	<table class="maintable table table-hover">
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+				      			<h3 style="text-align: center;margin-top: -5px;">样机借用协议</h3>
+				      		</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td>
+				      			<p class="text-left"><span class="project_title">需 方： ${agentName} </span></p>
+				      			<p class="text-left"><span class="project_title">供 方：飞生（上海）电子科技有限公司 </span></p>
+							</td>
+							<td>
+				      			<p class="text-left"><span class="project_title">编号：${projectCode }</span></p>
+				      			<p class="text-left"><span class="project_title">日期：${projectTime}</span></p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+								<p class="text-left"><span class="project_title">一、借用双方根据《合同法》及相关法律规定，经友好协商，现确定如下事项：</span></p>
+							      	<table class="maintable table table-hover" >
+							      		<thead>
+							      			<tr>
+									      		<th>客户名称</th>
+									      		<th>产品型号</th>
+									      		<th>样机总量</th>
+												<th>当前可使用数量</th>
+									      		<th>申请数 量</th>
+									      		<th>单价</th>
+									      		<th>代理商公司名称</th>
+									      		<th>备 注</th>
+								      		</tr>
+							      		</thead>
+							      		<tbody>
+							      			${html}
+									      	<tr name = "tr1" >
+									      		<td colspan="1">总计</td>
+									      		<td colspan="6">${sumNum}</td>
+									      	</tr>
+							      		</tbody>
+							      	</table>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+								<p class="text-left">
+									二、1、出货时间：${sendTime}<br/>
+									&nbsp;&nbsp;2、收 件 人：${receiveName}<br/>
+									&nbsp;&nbsp;&nbsp; 地 址：${receiveAddress}<br/>
+									&nbsp;&nbsp;4、借用时间：从${startYear}年${startMon}月${startDay}日 至${endYear}年${endMon}月${endDay}日，共计${countDays}天<br/>
+								</p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+				      			<p class="text-left"><span class="project_title">三、归还规定：</span></p>
+								<p class="text-left">
+									&nbsp;&nbsp;&nbsp;1、需方应在协议约定的试用期限内归还给供方，逾期未还超过三天的，<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;供方有权视需方此行为为购买，该试用合同自动转为销售合同，押金转为销售款。<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;未交押金的需方应在三天内将货款汇入供方指定帐号。<br/>
+									&nbsp;&nbsp;&nbsp;2、需方在试用期限内交还的产品，必须保证其产品包装、外观、配件的完整性和完好性，<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;以不影响供方的二次销售为原则。<br/>
+									&nbsp;&nbsp;&nbsp;3、如果需方在试用的期限内交还的产品有所损坏，供方有权追究需方的赔偿责任。<br/>
+									&nbsp;&nbsp;&nbsp;4.需方可申请延长样机展示时间，须另外签订新协议。<br/>
+								</p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+				      			<p class="text-left"><span class="project_title">四、所有权与风险转移：</span></p>
+								<p class="text-left">
+									&nbsp;&nbsp;&nbsp;1、在需方支付全部货款前，货物的所有权归供方所有。如需方未能按合同约定的期限归还或付款的，<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;供方有权以任何方式将货物收回，需方须承担因违约而给供方造成的经济损失，<br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;包括但不限于违约金、收回货物的运费及其他费用等。<br/>
+									&nbsp;&nbsp;&nbsp;2、货物的风险责任自供方发出货物或需方提货之日起转移至需方承担。<br/>
+								</p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+				      			<p class="text-left"><span class="project_title">五、解决合同纠纷的方式：</span>双方协商或调解不成由供方所在地法院裁决。</p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+				      			<p class="text-left"><span class="project_title">六、版本及生效：</span>本合同正本一式二份，双方各执一份，传真件同样有效。本合同自双方签字盖章之日起生效。</p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td colspan="6">
+				      			<p class="text-left"><span class="project_title">七、其它：</span>${otherText}</p>
+							</td>
+				      	</tr>
+				      	<tr name = "tr1" >
+				      		<td>
+				      			<p class="text-left"><span class="project_title">需 方：</span></p>
+				      			<p class="text-left">（盖章）</p><br/>
+				      			<p class="text-left">签约代表人：</p>
+				      			<p class="text-left">电话：</p>
+				      			<p class="text-left">传真：</p>
+				      			<p class="text-left">地址：</p>
+							</td>
+							<td>
+				      			<p class="text-left"><span class="project_title">供方：</span></p>
+				      			<p class="text-left">（盖章）</p><br/>
+				      			<p class="text-left">签约代表人：</p>
+				      			<p class="text-left">电话：</p>
+				      			<p class="text-left">传真：</p>
+				      			<p class="text-left">地址：</p>
+							</td>
+				      	</tr>
+			      	</table>
+		        </form>
+		    </div>
+		</div>
+  </body>
+</html>

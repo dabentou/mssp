@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+    <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"  
+        default-lazy-init="true">  
+        <description>Shiro安全配置</description>  
+          
+           <bean id="webFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">  
+            <property name="securityManager" ref="securityManager"/>  
+            <property name="loginUrl" value="/user/login"></property>  
+            <property name="successUrl" value="/index"></property><!-- 登录成功跳转到index.jsp 默认的很奇怪 -->  
+            <property name="unauthorizedUrl" value="/error"></property><!-- 没有认证成功，或者没有权限，跳转到错误页面 -->  
+            <property name="filterChainDefinitions">  
+                <value>  
+           /css/** = anon 
+           /js/** = anon 
+           /images/** = anon
+           /upload/image/** = anon
+
+           /** = authc
+           
+                </value>  
+            </property>  
+        </bean>   
+        
+        
+        <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
+            <property name="realm" ref="realm"/>  
+<!--             <property name="cacheManager" ref="ehCacheShiro"></property>   
+ -->        </bean>  
+       <!--    <bean id="realm" class="com.goldroid.ermp.server.permission.JdbcSupportRealm">  
+
+          </bean>
+          <bean id="passwordMatcher" class="org.apache.shiro.authc.credential.SimpleCredentialsMatcher"></bean>
+ -->        
+<!--  		<bean id="realm" class=" org.apache.shiro.realm.jdbc.JdbcRealm">  
+	        <property name="dataSource" ref="dataSource"></property>
+	        
+	        <property name="permissionsLookupEnabled" value="true"></property>
+	        
+	        <property name="authenticationQuery" value="select password from elite_member where uname = ?"> </property>
+	        <property name="credentialsMatcher" ref= "passwordMatcher"></property> 
+        </bean>   -->
+        
+        
+         <bean id="realm" class="com.mmd.mssp.realm.MyJdbcRealm">
+         	<property name="passwordService" ref= "defaultPasswordService"></property> 
+         	<property name="credentialsMatcher" ref= "passwordMatcher"></property> 
+         	<property name="authorizationCachingEnabled" value="false"></property>
+         </bean>
+         
+         
+         <bean id ="defaultPasswordService" class="org.apache.shiro.authc.credential.DefaultPasswordService">
+         	<property name="hashService" ref="defaultHashService"></property>
+         	<property name="hashFormat" ref="hexFormat"></property>
+         </bean>
+         <bean id="hexFormat" class="org.apache.shiro.crypto.hash.format.HexFormat"/>
+         <bean id="defaultHashService" class="org.apache.shiro.crypto.hash.DefaultHashService">
+         	<property name="hashAlgorithmName" value="md5"></property>
+         </bean>
+         <bean id ="passwordMatcher" class="org.apache.shiro.authc.credential.PasswordMatcher">
+          <property name="passwordService" ref="defaultPasswordService"></property>
+         
+         </bean>
+         
+       <!--  <bean id="ehCacheShiro" class="org.apache.shiro.cache.ehcache.EhCacheManager">  
+            <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>  
+        </bean>    -->
+          
+        <!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->  
+        <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>  
+  
+        
+    </beans>  

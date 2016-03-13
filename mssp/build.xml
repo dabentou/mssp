@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="mssp" default="deploy" basedir =".">
+    <property name="catalina.base" value="/app/mssp"></property>
+    <target name="stop_tomcat">
+        <echo>stop tomcat !</echo>
+        <exec executable="${catalina.base}/bin/shutdown.sh" failonerror="false">
+            <arg value="5"/>
+        </exec>
+        <sleep seconds="10"/>
+    </target>
+    <target name="start_tomcat">
+        <echo>start tomcat !</echo>
+        <echo> jenkins 参数化构建过程 复写掉默认的构建参数 BUILD_ID 为任意值 如: BUILD_ID=DONOT_KILL_ME </echo>
+        <exec executable="${catalina.base}/bin/startup.sh" failonerror="true"></exec>
+    </target>
+    <target name="copywar">
+        <delete dir="${catalina.base}/work/"></delete>
+        <delete dir="${catalina.base}/webapps/ROOT/"></delete>
+        <copyfile src="target/mssp-0.1-SNAPSHOT.war" dest="${catalina.base}/webapps/ROOT.war" forceoverwrite="true"></copyfile>
+    </target>
+    <target name="deploy" depends="stop_tomcat, copywar, start_tomcat">
+        <echo> Tomcat is starting!  Waiting for a  moment ! </echo>
+    </target>
+
+</project>

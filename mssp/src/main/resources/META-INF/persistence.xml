@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="mssp-entity" transaction-type="RESOURCE_LOCAL">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<class>com.mmd.mssp.domain.CommArea</class>
+		<class>com.mmd.mssp.domain.ProductSeries</class>
+		<class>com.mmd.mssp.domain.Pannel</class>
+		<class>com.mmd.mssp.domain.CommSeries</class>
+		<class>com.mmd.mssp.domain.Product</class>
+		<class>com.mmd.mssp.domain.CommArea</class>
+		<class>com.mmd.mssp.domain.CommCity</class>
+		<class>com.mmd.mssp.domain.PsiReason</class>
+		<class>com.mmd.mssp.domain.CommAgent</class>
+		<class>com.mmd.mssp.domain.CommRole</class>
+		<class>com.mmd.mssp.domain.PsiInventory</class>
+		<class>com.mmd.mssp.domain.PsiSellIn</class>
+		<class>com.mmd.mssp.domain.PsiSellInDatasource</class>
+		<class>com.mmd.mssp.domain.PsiEstimateByProduct</class>
+		<class>com.mmd.mssp.domain.PsiSellOut</class>
+		<class>com.mmd.mssp.domain.Vacation</class>
+	<properties>
+      <!-- <property name="javax.persistence.jdbc.driver" value="net.sourceforge.jtds.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:jtds:sqlserver://192.168.1.128:1433/mssp"/>
+      <property name="javax.persistence.jdbc.user" value="mssp"/>
+      <property name="javax.persistence.jdbc.password" value="123456"/>  -->
+       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mssp_v1"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value=""/> 
+       <!-- <property name="openjpa.Log" value="log4j"/>  -->
+      <property name="openjpa.Log" value="SQL=TRACE"/>
+      <property name="openjpa.RemoteCommitProvider" value="sjvm"/>
+      <!-- 数据库连接工厂时的属性 QueryTimeout：JDBC驱动执行查询超时的时间，以秒为单位。 PrettyPrint：是否格式化输出SQL语句。 PrettyPrintLineLength：SQL每行输出的最大长度。 -->
+      <property name="openjpa.ConnectionFactoryProperties" value="PrettyPrint=true, PrettyPrintLineLength=100"/>
+      <!-- 查询结果一次转化为对象的最多个数，相当于JDBC的结果集对象Statement.set FetchSize。默认为-1，表示所有的查询对象立即初始化；0表示使用JDBC驱动默认的数值 -->
+      <property name="openjpa.FetchBatchSize" value="-1"/>
+      <property name="openjpa.DynamicEnhancementAgent" value="false"/>
+      <property name="openjpa.Compatibility" value="QuotedNumbersInQueries=true"/> 
+    </properties>
+  </persistence-unit>
+ <!--  <persistence-unit name="demo" transaction-type="RESOURCE_LOCAL">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <class>com.demo.Entity</class>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="net.sourceforge.jtds.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:jtds:sqlserver://192.168.1.128:1433/mssp"/>
+      <property name="javax.persistence.jdbc.user" value="mssp"/>
+      <property name="javax.persistence.jdbc.password" value="123456"/> 
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/mssp"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value=""/> 
+      <property name="openjpa.Log" value="log4j"/>
+      <property name="openjpa.RemoteCommitProvider" value="sjvm"/>
+      <property name="openjpa.Compatibility" value="QuotedNumbersInQueries=true"/> 
+      数据库连接工厂时的属性 QueryTimeout：JDBC驱动执行查询超时的时间，以秒为单位。 PrettyPrint：是否格式化输出SQL语句。 PrettyPrintLineLength：SQL每行输出的最大长度。
+      <property name="openjpa.ConnectionFactoryProperties" value="PrettyPrint=true, PrettyPrintLineLength=100"/>
+      查询结果一次转化为对象的最多个数，相当于JDBC的结果集对象Statement.set FetchSize。默认为-1，表示所有的查询对象立即初始化；0表示使用JDBC驱动默认的数值
+      <property name="openjpa.FetchBatchSize" value="-1"/>
+      <property name="openjpa.DynamicEnhancementAgent" value="false"/>
+    </properties>
+  </persistence-unit> -->
+</persistence>
